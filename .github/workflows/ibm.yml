@@ -23,8 +23,8 @@ jobs:
         sudo apt-get install cf-cli
     - name: Login IBM Cloud
       env:
-        IBM_ACCOUNT: ${{ secrets.IBM_ACCOUNT }}
-        IBM_PASSWORD: ${{ secrets.IBM_PASSWORD }}
+        IBM_ACCOUNT: taojco1689@gmail.com
+        IBM_PASSWORD: Jintao891029910
       run: |
         cf login -a https://api.us-south.cf.cloud.ibm.com -u $IBM_ACCOUNT << EOF
         $IBM_PASSWORD
@@ -34,7 +34,7 @@ jobs:
         cf a
     - name: Restart IBM Cloud
       env:
-        IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
+        IBM_APP_NAME: xiaoxiao8910
       run: |
         cf restart $IBM_APP_NAME
         
